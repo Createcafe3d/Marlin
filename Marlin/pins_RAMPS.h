@@ -61,7 +61,7 @@
 #endif
 #define SERVO1_PIN          6
 #define SERVO2_PIN          5
-#define SERVO3_PIN          4
+#define SERVO3_PIN          -1 // ... They mapped the fan on to the servo pin ... D8 IS OPEN!
 
 #define X_MIN_PIN           3
 #ifndef X_MAX_PIN
@@ -152,7 +152,7 @@
   #define HEATER_BED_PIN RAMPS_D8_PIN
 #elif ENABLED(IS_RAMPS_EEF)                    // Hotend, Hotend, Fan
   #define HEATER_1_PIN   RAMPS_D9_PIN
-  #define FAN_PIN        RAMPS_D8_PIN
+  #define FAN_PIN        4 // another reminder the fans are plugged into the servo pins should be D8
 #elif ENABLED(IS_RAMPS_EEB)                    // Hotend, Hotend, Bed
   #define HEATER_1_PIN   RAMPS_D9_PIN
   #define HEATER_BED_PIN RAMPS_D8_PIN
