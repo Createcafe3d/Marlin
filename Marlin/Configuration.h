@@ -319,6 +319,11 @@
   #define  DEFAULT_Kp 25.59
   #define  DEFAULT_Ki 2.98
   #define  DEFAULT_Kd 54.93
+  
+  // PrintTron Post Pidtune with new firmware
+  //#define  DEFAULT_Kp 21.57
+  //#define  DEFAULT_Ki 2.13
+  //#define  DEFAULT_Kd 54.61
 
   // MakerGear
   //#define  DEFAULT_Kp 7.0
