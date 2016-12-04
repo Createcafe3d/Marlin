@@ -64,7 +64,7 @@
 #endif
 #define SERVO1_PIN          6
 #define SERVO2_PIN          5
-#define SERVO3_PIN          4
+#define SERVO3_PIN          -1 // They used the flipping servo pin to a fet to the fan, when D8 was open -_-
 
 //
 // Limit Switches
@@ -120,7 +120,7 @@
 //
 #define TEMP_0_PIN         13   // Analog Input
 #define TEMP_1_PIN         15   // Analog Input
-#define TEMP_BED_PIN       14   // Analog Input
+#define TEMP_BED_PIN       14   // Analog Input WILL: Doesn't exist... this spot was taken by the fans
 
 // SPI for Max6675 or Max31855 Thermocouple
 #if DISABLED(SDSUPPORT)
@@ -169,7 +169,7 @@
   #define HEATER_BED_PIN RAMPS_D8_PIN
 #elif ENABLED(IS_RAMPS_EEF)                    // Hotend, Hotend, Fan
   #define HEATER_1_PIN   RAMPS_D9_PIN
-  #define FAN_PIN        RAMPS_D8_PIN
+  #define FAN_PIN        4 //They plugged the fan.... into the servo pin
 #elif ENABLED(IS_RAMPS_EEB)                    // Hotend, Hotend, Bed
   #define HEATER_1_PIN   RAMPS_D9_PIN
   #define HEATER_BED_PIN RAMPS_D8_PIN
