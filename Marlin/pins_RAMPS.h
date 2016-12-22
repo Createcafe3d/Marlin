@@ -147,9 +147,9 @@
 
 #define HEATER_0_PIN     RAMPS_D10_PIN
 
-#if ENABLED(IS_RAMPS_EFB)                      // Hotend, Fan, Bed
-  #define FAN_PIN        -1
-  #define HEATER_BED_PIN RAMPS_D8_PIN
+#if ENABLED(IS_RAMPS_EFB)                      // Hotend, Fan, Bed CREATEHAO
+  #define FAN_PIN       RAMPS_D8_PIN //Our Super fan is plugged into the heated build plate
+  #define HEATER_BED_PIN -1
 #elif ENABLED(IS_RAMPS_EEF)                    // Hotend, Hotend, Fan
   #define HEATER_1_PIN   RAMPS_D9_PIN
   #define FAN_PIN        RAMPS_D8_PIN
@@ -173,9 +173,8 @@
 #endif
 
 #ifndef FAN_PIN
-  #define FAN_PIN 4      // IO pin. Buffer needed
+  #define FAN_PIN -1      // IO pin. Buffer needed
 #endif
-
 /**
  * LCD Controller Pin Assignments
  */
