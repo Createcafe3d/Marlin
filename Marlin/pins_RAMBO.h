@@ -132,7 +132,7 @@
 
 #define FAN_PIN             8
 #define FAN1_PIN            6
-#define FAN2_PIN            2
+#define FAN2_PIN            -1
 
 //
 // Misc. Functions
